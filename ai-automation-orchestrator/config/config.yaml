@@ -1,0 +1,20 @@
+# Automation platform configuration
+
+environment:
+  mode: dev        # dev or prod
+
+paths:
+  airflow_dag: dags/automation_pipeline.py
+  etl_script: automation/python/etl_job.py
+  playwright_script: automation/playwright/scraper.py
+  robot_script: automation/robot/login_test.robot
+  logs_dir: logs
+  output_dir: data/output
+
+logging:
+  level: INFO
+  file: logs/orchestrator.log
+
+retries:
+  count: 3
+  delay_seconds: 300
