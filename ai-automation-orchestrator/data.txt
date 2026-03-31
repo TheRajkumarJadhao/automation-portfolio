@@ -1,0 +1,5 @@
+
+https://maharera.maharashtra.gov.in/
+
+docker compose up -d
+docker compose logs -f airflow
